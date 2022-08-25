@@ -1,0 +1,58 @@
+
+elastic-query-service:
+  backPressure-delaty-ms: 500
+
+elastic-config:
+  index-name: twitter-index
+  connection-url: http://localhost:9200
+  connect-timeout-ms: 5000
+  socket-timeout-ms: 30000
+
+elastic-query-config:
+  text-field: text
+
+kafka-config:
+  topic-name: twitter-analytics-topic-2
+  topic-names-to-create:
+    - twitter-analytics-topic-2
+  num-partitions: 3
+  replication-factor: 3
+  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  schema-registry-servers: http://localhost:8081
+  sleep-time-ms: 1000
+  max-interval-ms: 10000
+  retry-multiplier: 2.0
+  admin-retry-max: 1
+
+server:
+  port: 8183
+
+spring:
+  webflux:
+    base-path: /reactive-elastic-query-service
+  codec:
+    max-in-memory-size: 25MB
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          max-in-memory-size: 25MB
+
+
+
+
+
+#
+#user-config:
+#  username: test
+#  password: '{cipher}0dd39d510f6980df9070e1629488045864bcec238cb1f58505638f9384a4a906'
+#  roles: USER
+#
+#springdoc:
+#  api-docs:
+#    path: /api-docs
+#  swagger-ui:
+#    path: /swagger-ui.html
+#
+#security:
+#  paths-to-ignore: /api-docs
