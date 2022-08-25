@@ -1,6 +1,6 @@
 
 elastic-query-service:
-  backPressure-delaty-ms: 500
+  backPressure-delay-ms: 500
 
 elastic-config:
   index-name: twitter-index
