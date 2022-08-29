@@ -5,8 +5,16 @@ server:
 
 elastic-query-service:
   version: v1
+  custom-audience: elastic-query-service
 
 
+spring:
+  security:
+    oauth2:
+      resourcesserver:
+        jwt:
+          issuer-uri: http://localhost:8081/auth/realms/microservices-realm
+          jwk-set-uri: http://localhost:8081/auth/realms/microservices-realm/protocol/openid-connect/certs
 elastic-query-config:
   text-field: text
 
