@@ -24,7 +24,7 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQL9Dialect
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public&binaryTransfer=true&reWriteBatchedInserts=true
-    username: postgres
+    username: bereketfrezghi
     password: '{cipher}918d70c68eaa4d81bdc45ff462cdbcd010529482fdbe7f0624481632e3284742'
     driver-class-name: org.postgresql.Driver
     platform: postgres
