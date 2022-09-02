@@ -28,6 +28,7 @@ spring:
     password: '{cipher}918d70c68eaa4d81bdc45ff462cdbcd010529482fdbe7f0624481632e3284742'
     driver-class-name: org.postgresql.Driver
     platform: postgres
+    role: bereketfrezghi
     schema: classpath:init-schema.sql
     data: classpath:init-data.sql
     initialization-mode: always
